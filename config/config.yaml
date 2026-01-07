@@ -1,5 +1,5 @@
 # 是否显示进度
-print-progress: false
+print-progress: ture
 
 # 并发线程数
 concurrent: 800
