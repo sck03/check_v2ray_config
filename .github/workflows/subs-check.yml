@@ -51,10 +51,10 @@ jobs:
       - name: 复制并只在有变化时推送（纯净提交）
         run: |
           echo "复制所有文件到目标仓库"
-          cp -r output/* target-repo/ || echo "复制失败但继续"
+          cp -rf output/* target-repo/ || echo "复制失败但继续"
 
           cd target-repo
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
 
           git add .
