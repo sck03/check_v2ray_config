@@ -18,9 +18,9 @@ jobs:
       - name: Checkout 本仓库
         uses: actions/checkout@v4
 
-      - name: 运行 subs-check（20分钟必杀 + 纯净默认输出）
+      - name: 运行 subs-check（60分钟必杀 + 纯净默认输出）
         run: |
-          echo "开始运行 beck-8/subs-check（最多20分钟，超时直接KILL）"
+          echo "开始运行 beck-8/subs-check（最多60分钟，超时直接KILL）"
           
           timeout --signal=KILL --preserve-status 6000 \
             docker run --rm \
